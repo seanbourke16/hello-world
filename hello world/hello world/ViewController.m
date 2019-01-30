@@ -17,6 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    color=3;
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -26,8 +27,27 @@
     // Dispose of any resources that can be recreated.
 }
 
--(IBAction) changeMessage :(id)sender
+-(IBAction) buttonPressed :(id)sender
 {
-    [label setText:@"Text"];
+    color++;
+    if(color==6)color=0;
+    if(color==0){
+        self.view.backgroundColor=[UIColor redColor];
+    }
+    if(color==1){
+        self.view.backgroundColor=[UIColor orangeColor];
+    }
+    if(color==2){
+        self.view.backgroundColor=[UIColor yellowColor];
+    }
+    if(color==3){
+        self.view.backgroundColor=[UIColor greenColor];
+    }
+    if(color==4){
+        self.view.backgroundColor=[UIColor blueColor];
+    }
+    if(color==5){
+        self.view.backgroundColor=[UIColor purpleColor];
+    }
 }
 @end
